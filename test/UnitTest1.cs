@@ -12,7 +12,7 @@ namespace test
         {
             /* Playwright.Selectors.SetTestIdAttribute("test-id"); */
 
-            await Page.GotoAsync("http://localhost:5041/");
+            await Page.GotoAsync("https://webday2023.nicolaiarocci.com");
 
             await Page.GetByTestId("counter").ClickAsync();
 
