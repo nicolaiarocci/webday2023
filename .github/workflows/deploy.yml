@@ -47,7 +47,7 @@ jobs:
       run: dotnet tool install --global Microsoft.Playwright.CLI
     - name: Install Browsers
       run: playwright install --with-deps
-    - name: Take a nap
-      run: sleep 60
+    # - name: Take a nap
+    #   run: sleep 60
     - name: Test
       run: dotnet test --no-build --verbosity normal -- Playwright.LaunchOptions.SlowMo=2000
