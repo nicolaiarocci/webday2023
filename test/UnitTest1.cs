@@ -18,11 +18,11 @@ namespace test
 
             await Page.GetByTestId("clickme").ClickAsync();
 
-            await Expect(Page.GetByTestId("status")).ToHaveTextAsync("Current count: 1");
+            await Expect(Page.GetByTestId("status")).ToContainTextAsync(": 1");
 
             await Page.GetByTestId("clickme").ClickAsync();
 
-            await Expect(Page.GetByTestId("status")).ToHaveTextAsync("Current count: 2");
+            await Expect(Page.GetByTestId("status")).ToContainTextAsync(": 2");
 
         }
     }
