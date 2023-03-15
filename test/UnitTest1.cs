@@ -1,5 +1,4 @@
 using Microsoft.Playwright.NUnit;
-using Microsoft.Playwright;
 
 namespace test
 {
@@ -12,7 +11,7 @@ namespace test
         {
             /* Playwright.Selectors.SetTestIdAttribute("test-id"); */
 
-            await Page.GotoAsync("https://webday2023.nicolaiarocci.com");
+            _ = await Page.GotoAsync("https://webday2023.nicolaiarocci.com");
 
             await Page.GetByTestId("counter").ClickAsync();
 
