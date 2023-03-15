@@ -1,7 +1,6 @@
 using Microsoft.Playwright.NUnit;
-using Microsoft.Playwright;
 
-namespace test
+namespace Test
 {
     [Parallelizable(ParallelScope.Self)]
     [TestFixture]
@@ -12,7 +11,7 @@ namespace test
         {
             /* Playwright.Selectors.SetTestIdAttribute("test-id"); */
 
-            await Page.GotoAsync("http://localhost:5041/");
+            _ = await Page.GotoAsync("http://localhost:5041/");
 
             await Page.GetByTestId("counter").ClickAsync();
 
