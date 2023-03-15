@@ -14,6 +14,8 @@ namespace test
 
             await Page.GotoAsync("https://webday2023.nicolaiarocci.com");
 
+            throw new ApplicationException("Crash!");
+
             await Page.GetByTestId("counter").ClickAsync();
 
             await Page.GetByTestId("clickme").ClickAsync();
